@@ -178,3 +178,12 @@ body.dark-theme #themeBtn {
         font-size: 34px;
     }
 }
+
+
+body.dark-theme #clearBtn,
+body.dark-theme #backBtn,
+body.dark-theme #percentBtn,
+body.dark-theme #signBtn {
+    background-color: #e9e9ed;
+    color: #302d3d;
+}
