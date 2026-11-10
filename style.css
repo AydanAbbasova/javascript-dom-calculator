@@ -1,0 +1,180 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #eacafa;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s;
+}
+
+/* Kalkulyator */
+
+.calculator {
+    width: 335px;
+    padding: 25px;
+    background-color: #fafafa;
+    border-radius: 32px;
+    box-shadow: 0 10px 20px rgba(100, 50, 120, 0.18);
+    transition: 0.3s;
+}
+
+/* Tema duymesi */
+
+.theme-area {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+#themeBtn {
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background-color: #edf0f3;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px #dce0e3,
+                -4px -4px 8px white;
+}
+
+/* Ekran */
+
+#screen {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 80px;
+    padding: 15px;
+    margin-bottom: 25px;
+    background-color: #eaf3f2;
+    border-radius: 25px;
+    box-shadow: inset 3px 3px 8px #dce6e5,
+                3px 5px 12px #d5d5d5;
+    font-size: 40px;
+    color: #777;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Duymeler */
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+button {
+    height: 54px;
+    border: none;
+    border-radius: 50%;
+    background-color: #edf0f3;
+    color: #222;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 4px 4px 9px #d9dcdf,
+                -4px -4px 9px white;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    box-shadow: inset 3px 3px 6px #d5d8db,
+                inset -3px -3px 6px white;
+}
+
+.operation {
+    background-color: #e8edf1;
+}
+
+#clearBtn,
+#backBtn,
+#percentBtn,
+#signBtn {
+    background-color: #e9edf0;
+}
+
+/* Beraber duymesi */
+
+#equalBtn {
+    background-color: #dfa5c9;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 4px 4px 9px #d7c2d0,
+                -4px -4px 9px white;
+}
+
+/* Dark Theme */
+
+body.dark-theme {
+    background-color: #171522;
+}
+
+body.dark-theme .calculator {
+    background-color: #252333;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme #screen {
+    background-color: #191925;
+    color: #f1eafa;
+    box-shadow: inset 3px 3px 8px #11111a,
+                3px 5px 10px #302e40;
+}
+
+body.dark-theme button {
+    background-color: #343244;
+    color: #f4edf8;
+    box-shadow: 4px 4px 9px #191824,
+                -4px -4px 9px #353346;
+}
+
+body.dark-theme #equalBtn {
+    background-color: #b85d91;
+    color: white;
+}
+
+body.dark-theme #themeBtn {
+    background-color: #454156;
+    color: white;
+    box-shadow: 3px 3px 7px #191824,
+                -3px -3px 7px #39364a;
+}
+
+/* Mobil gorunus */
+
+@media (max-width: 380px) {
+
+    .calculator {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    button {
+        height: 50px;
+    }
+
+    #screen {
+        height: 70px;
+        font-size: 34px;
+    }
+}
